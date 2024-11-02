@@ -1,6 +1,6 @@
-import { analyzeSentiment } from "./sentiment_analysis.js"; // Import if using modules
+// content.js
+console.log("Content script is running on:", window.location.href);
 
-// Example of using the analyzeSentiment function
 const currentPageTitle = document.title;
 const sentiment = analyzeSentiment(currentPageTitle);
 
