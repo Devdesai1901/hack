@@ -5,5 +5,7 @@ const currentPageTitle = document.title;
 const sentiment = analyzeSentiment(currentPageTitle);
 
 if (sentiment === "impulsive") {
-  chrome.runtime.sendMessage({ impulseDetected: true });
+  chrome.runtime.sendMessage({ impulseDetected: true }, (response) => {
+    console.log(response.status);
+  });
 }

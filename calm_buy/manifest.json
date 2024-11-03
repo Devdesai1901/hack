@@ -1,20 +1,22 @@
 {
-    "manifest_version": 3,
-    "name": "Calm Buy",
-    "version": "1.0",
-    "description": "Impulse Purchase Checker with sentiment analysis.",
-    "permissions": ["tabs", "activeTab", "storage","notifications"],
-    "background": {
-       "service_worker": "background.js"
-    },
-    "action": {
-       "default_popup": "popup.html"
-   
-    },
-    "content_scripts": [
-       {
-          "matches": ["<all_urls>"],
-          "js": ["sentiment_analysis.js","content.js"]
-       }
-    ]
- }
+   "manifest_version": 3,
+   "name": "Calm Buy",
+   "version": "1.0",
+   "description": "Impulse Purchase Checker with sentiment analysis.",
+   "permissions": ["tabs", "activeTab", "storage", "notifications"],
+   "background": {
+      "service_worker": "background.js"
+   },
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [
+      {
+         "matches": ["<all_urls>"],
+         "js": ["sentiment_analysis.js", "content.js"]
+      }
+   ],
+   "icons": {
+      "16": "icons/icon.png"
+   }
+}
